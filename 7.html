@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="checkbox" id="mycheckbox">
+    <label for="mycheckbox">Subscribe</label><br><br>
+    <input type="radio"id="visa"name="card">
+    <label for="visa">Visa</label><br>
+    <input type="radio" id="mastercard" name="card">
+    <label for="mastercard">Mastercard</label><br>
+    <input type="radio" id="paypal" name="card">
+    <label for="paypal">Paypal</label><br><br>
+    <button id="mysubmit">Submit</button>
+
+    <p id="subresult"></p>
+    <p id="mypayment"></p>
+
+    <script>
+        const mycheckbox=document.getElementById("mycheckbox");
+        const visa=document.getElementById("visa");
+        const mastercard=document.getElementById("mastercard");
+        const paypal=document.getElementById("paypal");
+        const mysubmit=document.getElementById("mysubmit");
+        const subresult=document.getElementById("subresult");
+        const mypayment=document.getElementById("mypayment");
+
+        mysubmit.onclick=function(){
+            if(mycheckbox.checked){
+                subresult.innerHTML=`You are subscribed`
+            }
+            else{
+                subresult.innerHTML=`You are Not subscribed`
+            }
+
+            if(visa.checked){
+                mypayment.innerHTML=`Your payment mode is Visa`
+            }
+            else if(mastercard.checked){
+                mypayment.innerHTML=`You payed through Mastercard`
+            }
+            else if(paypal.checked){
+                mypayment.innerHTML=`You payed through paypal`
+            }
+            else{
+                mypayment.innerHTML=`Please select a payment option`
+            }
+        }
+    </script>
+</body>
+</html>

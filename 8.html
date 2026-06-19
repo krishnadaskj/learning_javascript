@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Mail to username and extension</h1>
+    <label id="myemail">Email:</label>
+    <input id="mytext">
+    <button id="mybtn">Submit</button>
+    <p id="username"></p>
+    <p id="extension"></p>
+
+    <script>
+        document.getElementById("mybtn").onclick=function(){
+            let email=document.getElementById("mytext").value;
+            let pos=email.indexOf("@");
+            document.getElementById("username").innerHTML=`user  name is :${email.slice(0,pos)}`;
+            document.getElementById("extension").innerHTML=`Extension is:${email.slice(pos+1)}`;
+        }
+    </script>
+</body>
+</html>

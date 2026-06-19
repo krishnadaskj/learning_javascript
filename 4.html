@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #countlabel{
+            display: block;
+            text-align: center;
+            font-size: 10em;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        #btncontainer{
+            text-align: center;
+        }
+
+        .button{
+            padding: 10px 20px;
+            font-size: 1.5em;
+            color: white;
+            background-color: hsl(240, 73%, 74%);
+            border-radius: 10px;
+            cursor: pointer;
+        }
+
+        .button:hover{
+            background-color: rgb(25, 25, 235);
+        }
+    </style>
+</head>
+<body>
+    <label id="countlabel">0</label><br>
+    <div id="btncontainer">
+    <button id="Dbtn" class="button">Decrease</button>
+    <button id="Rbtn" class="button">Reset</button>
+    <button id="Ibtn" class="button">Increase</button>
+    </div>
+    
+    <script>
+        const Decreasebtn=document.getElementById("Dbtn");
+        const Resetbtn=document.getElementById("Rbtn");
+        const Increasebtn=document.getElementById("Ibtn");
+        const countlabel=document.getElementById("countlabel");
+        let count=0;
+        Decreasebtn.onclick=function(){
+            count--;
+            countlabel.innerHTML=count;
+        }
+        Increasebtn.onclick=function(){
+            count++;
+            countlabel.innerHTML=count;
+        }
+
+        Resetbtn.onclick=function(){
+            count=0;
+            countlabel.innerHTML=count;
+        }
+    </script>
+</body>
+</html>

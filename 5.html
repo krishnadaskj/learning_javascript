@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        text-align: center;
+    }
+    #mybutton{
+        font-size: 3em;
+        padding: 10px 25px;
+        color: white;
+        background-color: rgb(50, 46, 125);
+        border-radius: 5px;
+    }
+    #mylabel{
+        font-size: 3em;
+    }
+</style>
+<body>
+    <h1>Random number betweem 1 and 6</h1>
+    <button id="mybutton">Roll</button><br>
+    <label id="mylabel"></label>
+
+    <script>
+        const mybutton=document.getElementById("mybutton");
+        const mylabel=document.getElementById("mylabel");
+        let min=1;
+        let max=6;
+        let RandomNum;
+
+        mybutton.onclick=function(){
+            RandomNum= Math.floor(Math.random()*max)+min;
+            mylabel.innerHTML=RandomNum;
+        }
+    </script>
+</body>
+</html>
