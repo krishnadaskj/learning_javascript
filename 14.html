@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //map(),filter(),reduce() using arroww function
+        //(parameter)=>some code;
+
+        const numbers=[1,2,3,4,5,6,7];
+        const squares=numbers.map((element)=>Math.pow(element,2));
+        const evennumbers=numbers.filter((element)=>element%2===0);
+        const total=numbers.reduce((accumulator,element)=>accumulator+element);
+
+        console.log(squares);
+        console.log(evennumbers);
+        console.log(total);
+    </script>
+</body>
+</html>
