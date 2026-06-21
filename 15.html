@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-image: url("https://media.istockphoto.com/id/1265900812/photo/aerial-view-of-london-and-the-tower-bridge.jpg?s=612x612&w=0&k=20&c=-2j6QgZyeveMcGzuWmgLYqC7zXTkcSBnayuZsDqs5KQ=");
+            background-position: center;   
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+            margin: 0;
+
+        }
+        #clock-container{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        #clock{
+            font-family: monospace;
+            font-size: 6.5rem;
+            font-weight: bold;
+            text-align: center;
+            color: white;
+            backdrop-filter: blur(5px);
+            background-color: hsla(0, 0%, 100%, 0.1);
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div id="clock-container">
+        <div id="clock">00:00:00</div>
+    </div>
+
+    <script>
+        function Updateclock(){
+            const now=new Date();
+            let hours=now.getHours();
+            const meridem=hours>12?"PM":"AM";
+            hours=hours%12||12;
+            hours=hours.toString().padStart(2,0);
+            const minute=now.getMinutes().toString().padStart(2,0);
+            const seconds=now.getSeconds().toString().padStart(2,0);
+            const timeString=`${hours}:${minute}:${seconds} ${meridem}`;
+            document.getElementById("clock").textContent=timeString;
+        }
+
+        Updateclock();
+        setInterval(Updateclock,1000)
+    </script>
+</body>
+</html>

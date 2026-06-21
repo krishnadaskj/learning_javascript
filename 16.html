@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: hsl(0, 0%, 90%);
+        }
+        #myh1{
+            font-size: 4rem;
+            font-family: Arial, sans-serif;
+            color: hsl(0, 0%, 25%)
+            ;
+        }
+
+        #container{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            border: 5px solid;
+            border-radius: 50px;
+            padding: 30px;
+            background-color: white;
+        }
+
+        #display{
+            font-size: 5rem;
+            font-family: monospace;
+            font-weight: bold;
+            color: hsl(0, 0%, 30%);
+            margin-bottom: 25px;
+            text-shadow: 2px 2px 2px hsl(0, 0%, 0%,0.75);
+        }
+
+        #controls button{
+            font-size: 1.5rem;
+            font-weight: bold;
+            padding: 10px 20px;
+            margin: 5px;
+            min-width: 125px;
+            border: none;
+            border-radius: 10px;
+            color: white;
+            cursor: pointer;
+            transition: background-color 0.5s ease;
+        }
+
+        #startbutton{
+            background-color: hsl(120, 100%, 40%);
+        }
+        #startbutton:hover{
+            background-color: hsl(120, 100%, 30%);
+
+        }
+
+         #stopbutton{
+            background-color: hsl(10, 61%, 48%);
+        }
+        #stopbutton:hover{
+            background-color: hsl(10, 72%, 57%);
+
+        }
+
+         #resetbutton{
+            background-color: hsl(263, 100%, 50%);
+        }
+        #resetbutton:hover{
+            background-color: hsl(258, 67%, 36%);
+
+        }
+    </style>
+</head>
+<body>
+    <h1 id="myh1">StopWatch</h1>
+    <div id="container">
+        <div id="display">
+            00:00:00:00
+        </div>
+        <div id="controls">
+            <button id="startbutton" onclick="start()">Start</button>
+            <button id="stopbutton" onclick="stop()">Stop</button>
+            <button id="resetbutton" onclick="reset()">Reset</button>
+        </div>
+    </div>
+
+    <script>
+        
+    </script>
+</body>
+</html>

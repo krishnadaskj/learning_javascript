@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #myb{
+            font-size: 2rem;
+        }
+    </style>
+</head>
+<body>
+    <img src="https://img.magnific.com/free-vector/blue-sports-car-isolated-white-vector_53876-67354.jpg?semt=ais_hybrid&w=740&q=80" id="myimg" width="400px"><br>
+     <button id="myb">Hide</button>
+
+<script>
+        const myb=document.getElementById("myb");
+        const myimg=document.getElementById("myimg");
+        myb.addEventListener("click",event=>{
+            if(myimg.style.visibility==="hidden"){
+                myimg.style.visibility="visible";
+                myb.textContent="Hide";
+            }
+            else{
+                myimg.style.visibility="hidden";
+                myb.textContent="Show";
+            }
+        })
+    </script>
+</body>
+</html>
